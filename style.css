@@ -228,8 +228,8 @@ body, html {
   background-size: 200% 200%;
   background-position: center;
   background-repeat: repeat;
-  -webkit-filter: blur(5px);
-  opacity: 0.6;
+  /*-webkit-filter: blur(5px);*/
+  /*opacity: 0.6;*/
   -webkit-animation: backgroundScroll 10s linear infinite;
   animation: backgroundScroll 10s linear infinite;
   webkit-transform: rotateX(45deg);
@@ -254,36 +254,16 @@ body, html {
 }
 
 #hero #floor-perspective #floor-grid {
-  /*background: linear-gradient(to right, #FDF259, #A1E4EC);*/
-  background: linear-gradient(to right, #FBE300, #FFB504);
+  background:
+    linear-gradient(to bottom, transparent 2px, rgba(255, 181, 0, 0.4) 5px, rgba(251, 227, 0, 1) 5px, rgba(251, 227, 0, 1) 7px, rgba(255, 181, 0, 0.4) 8px, transparent 11px),
+    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) 5px, rgba(251, 227, 0, 1) 5px, rgba(251, 227, 0, 1) 8px, rgba(255, 181, 0, 0.4) 8px, transparent 13px);
 
-  -webkit-mask-image:
-    linear-gradient(to bottom, transparent, transparent 5px, #fff 5px, #fff 7px, transparent 7px),
-    linear-gradient(to right, transparent, transparent 5px, #fff 5px, #fff 8px, transparent 8px);
-
-  -webkit-mask-size: 50px, 50px;
-  -webkit-mask-repeat: repeat;
-}
-
-#hero #floor-perspective #floor-grid-blur {
-  content: "";
-  display: block;
-
-  /*background: linear-gradient(to right, #D57A03, #09929A);*/
-  background: linear-gradient(to right, #FFC003, #7A2006);
-
-  -webkit-mask-image:
-    linear-gradient(to bottom, transparent, #fff 6px, transparent 12px),
-    linear-gradient(to right, transparent, #fff 6px, transparent 13px);
-
-  -webkit-mask-size: 50px, 50px;
-  opacity: 0.5;
-  -webkit-mask-repeat: repeat;
+  background-size: 50px 20px;
 }
 
 @keyframes backgroundScroll {
-	from {-webkit-mask-position: center 100%;}
-  to {-webkit-mask-position: center 0;}
+	from {background-position: center 100%;}
+  to {background-position: center 0;}
 }
 
 
