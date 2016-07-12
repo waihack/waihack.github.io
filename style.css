@@ -1,0 +1,147 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, #0C0C1D, transparent), linear-gradient(to right, #1B061C, #0C0C1D);
+}
+
+#bg {
+  height: 100%;
+  width: 100%;
+}
+
+#bg #title {
+  font-family: "TR2N";
+  font-size: 10em;
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  z-index: 2;
+  font-weight: normal;
+  color: #00C6FF;
+  opacity: 0.9;
+  text-shadow: 0 0 30px rgba(0, 198, 255, 0.6),
+			0 0 60px rgba(0, 198, 255, 0.4),
+			0 0 100px rgba(0, 198, 255, 0.2),
+			0 0 90px rgba(0, 198, 255, 0.1);
+}
+
+#bg #title:after {
+  content: "TRONHACKS";
+  font-size: 0.992em;
+  opacity: 0.2;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #00C6FF;
+}
+
+#bg #title:before {
+  content: "TRONHACKS";
+  font-size: 0.985em;
+  opacity: 0.2;
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #00C6FF;
+}
+
+#bg #floor {
+  width: 100%;
+	overflow: hidden;
+  position: absolute;
+  height: 80%;
+  bottom: 0;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #fff);
+}
+
+#bg #floor-perspective {
+  -webkit-perspective: 20%;
+  perspective: 200px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  width: 120%;
+  z-index: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#bg #floor-perspective #floor-grid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('img/grid.svg');
+  background-size: 200% 200%;
+  background-position: center;
+  background-repeat: repeat;
+  -webkit-filter: blur(5px);
+  opacity: 0.6;
+  -webkit-animation: backgroundScroll 10s linear infinite;
+  animation: backgroundScroll 10s linear infinite;
+  webkit-transform: rotateX(45deg);
+  transform: rotateX(45deg);
+}
+
+#bg #floor-perspective #floor-grid,
+#bg #floor-perspective #floor-grid-blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: rotateX(45deg);
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat, repeat, no-repeat;
+  -webkit-animation: backgroundScroll 20s linear infinite;
+  animation: backgroundScroll 20s linear infinite;
+  -webkit-mask-position: center 100%;
+}
+
+#bg #floor-perspective #floor-grid {
+  background: linear-gradient(to right, #fbeafc, #c9ddff);
+
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent, transparent 5px, #fff 5px, #fff 7px, transparent 7px),
+    linear-gradient(to right, transparent, transparent 5px, #fff 5px, #fff 8px, transparent 8px);
+
+  -webkit-mask-size: 50px, 50px;
+  -webkit-mask-repeat: repeat;
+}
+
+#bg #floor-perspective #floor-grid-blur {
+  content: "";
+  display: block;
+
+  background: linear-gradient(to right, #8e1384, #09419b);
+
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent, #fff 6px, transparent 12px),
+    linear-gradient(to right, transparent, #fff 6px, transparent 13px);
+
+  -webkit-mask-size: 50px, 50px;
+  opacity: 0.5;
+  -webkit-mask-repeat: repeat;
+}
+
+@keyframes backgroundScroll {
+	from {-webkit-mask-position: center 100%;}
+  to {-webkit-mask-position: center 0;}
+}
