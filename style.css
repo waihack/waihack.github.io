@@ -11,7 +11,7 @@ body, html {
   padding: 0;
   margin: 0;
   background:
-    url('https://cdn.tutsplus.com/active/uploads/legacy/tuts/279_perlinNoise/Tutorial/2.jpg'),
+    url('clouds.jpg'),
     linear-gradient(to bottom, #0C0C1D, transparent), linear-gradient(to right, #1B061C, #0C0C1D);
   background-size: cover;
   background-blend-mode: color-dodge;
@@ -56,7 +56,7 @@ body, html {
   width: 100%;
   background: transparent;
   border: 2px solid rgba(0, 198, 255, 0.8);
-  background: rgba(0, 198, 255, 0.1);
+  background: rgba(0, 198, 255, 0.2);
   color: rgba(0, 198, 255, 0.8);
   opacity: 1;
   font-size: 1.5rem;
@@ -64,12 +64,14 @@ body, html {
   padding: 0.8em 1.5em;
   margin: 0.8em 0.2em 0 0.2em;
   -webkit-transition: border 0.1s linear;
+  color: #aaecff;
   box-shadow: rgba(0, 198, 255, 0.5) 0 0 5px,
     inset rgba(0, 198, 255, 0.2) 0 0 5px;
 }
 
 ::-webkit-input-placeholder {
-   color: #fff;
+   color: inherit;
+   opacity: 0.5;
 }
 
 #hero #hero-content #signup-form {
@@ -77,13 +79,12 @@ body, html {
 }
 
 #hero #hero-content #signup-form input {
-  color: #fff;
   text-transform: uppercase;
 }
 
 #hero #hero-content #signup-form button {
   cursor: pointer;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 #hero #hero-content #signup-form input:focus,
@@ -109,7 +110,7 @@ body, html {
   padding: 0;
   margin: 0;
   /*-webkit-animation: flicker 3s linear;*/
-  -webkit-animation: fadein 3s linear, flicker 5s 3s infinite linear;
+  animation: fadein 3s linear, flicker 5s 6s infinite linear;
   height: 1em;
   line-height: 1em;
   position: relative;
