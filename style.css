@@ -10,18 +10,18 @@ body, html {
   font-family: Helvetica, Arial;
   padding: 0;
   margin: 0;
+
   background:
     url('clouds.jpg'),
-    linear-gradient(to bottom, #0C0C1D, transparent), linear-gradient(to right, #1B061C, #0C0C1D);
-  background-size: cover;
+    linear-gradient(to right, #1B061C, #0C0C1D);
+
+  background-size: cover, cover;
   background-blend-mode: color-dodge;
-  /*mask: url(#m1);*/
+  -webkit-animation: gradient 1s linear infinite;
 }
 
 #mask-svg {
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 #hero {
@@ -54,6 +54,7 @@ body, html {
   box-sizing: border-box;
   display: block;
   width: 100%;
+  font-family: inherit;
   background: transparent;
   border: 2px solid rgba(0, 198, 255, 0.8);
   background: rgba(0, 198, 255, 0.2);
@@ -84,7 +85,6 @@ body, html {
 
 #hero #hero-content #signup-form button {
   cursor: pointer;
-  /*font-weight: bold;*/
 }
 
 #hero #hero-content #signup-form input:focus,
@@ -105,7 +105,6 @@ body, html {
   width: 100%;
   padding: 0;
   margin: 0;
-  /*-webkit-animation: flicker 3s linear;*/
   animation: fadein 3s linear, flicker 5s 6s infinite linear;
   height: 1em;
   line-height: 1em;
@@ -202,67 +201,48 @@ body, html {
 }
 
 #hero #floor {
-  width: 100%;
 	overflow: hidden;
   position: absolute;
-  height: 80%;
+  height: 40%;
   bottom: 0;
+  right: 0;
+  left: 0;
 
-  -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #fff);
-  /*-moz-mask-image: linear-gradient(to bottom, transparent 50%, #fff);*/
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #fff);
 }
 
 #hero #floor-perspective {
-  perspective: 200px;
+  perspective: 100px;
+  perspective-origin: bottom center;
   height: 100%;
   overflow: hidden;
-  position: relative;
-  left: 50%;
-  width: 120%;
-  z-index: 0;
-  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 #hero #floor-perspective #floor-grid {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-image: url('img/grid.svg');
-  background-size: 200% 200%;
+  top: -50%;
+  bottom: -0.3rem;
+  right: -50%;
+  left: -50%;
   background-position: center;
   background-repeat: repeat;
-  animation: backgroundScroll 10s linear infinite;
-  transform: rotateX(45deg);
-}
+  animation: backgroundScroll 1s linear infinite;
+  transform: rotateX(13deg);
 
-#hero #floor-perspective #floor-grid,
-#hero #floor-perspective #floor-grid-blur {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  transform: rotateX(45deg);
-  z-index: 1;
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat, repeat, no-repeat;
-  animation: backgroundScroll 20s linear infinite;
-  mask-position: center 100%;
-}
-
-#hero #floor-perspective #floor-grid {
+  background-position: center 0;
   background:
-    linear-gradient(to bottom, transparent 2px, rgba(255, 181, 0, 0.4) 5px, rgba(251, 227, 0, 1) 5px, rgba(251, 227, 0, 1) 7px, rgba(255, 181, 0, 0.4) 8px, transparent 11px),
-    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) 5px, rgba(251, 227, 0, 1) 5px, rgba(251, 227, 0, 1) 8px, rgba(255, 181, 0, 0.4) 8px, transparent 13px);
+    linear-gradient(to bottom, transparent 0px, rgba(255, 181, 0, 0.4) 4px, rgba(251, 227, 0, 1) 4px, rgba(251, 227, 0, 1) 8px, rgba(255, 181, 0, 0.4) 8px, transparent 12px),
+    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) 6px, rgba(251, 227, 0, 1) 6px, rgba(251, 227, 0, 1) 12px, rgba(255, 181, 0, 0.4) 12px, transparent 18px);
 
-  background-size: 50px 20px;
+  background-size: 70px 45px;
 }
 
 @keyframes backgroundScroll {
-	from {background-position: center 100%;}
+	from {background-position: center 45px;}
   to {background-position: center 0;}
 }
 
