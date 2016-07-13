@@ -98,6 +98,7 @@ body, html {
 }
 
 #hero #title {
+  color: #8ee6ff;
   max-width: 100%;
   font-family: "TR2N";
   font-size: 6rem;
