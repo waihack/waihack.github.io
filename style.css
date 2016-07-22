@@ -65,7 +65,7 @@ body, html {
   padding: 0.8em 1.5em;
   margin: 0.8em 0.2em 0 0.2em;
   -webkit-transition: border 0.1s linear;
-  color: #aaecff;
+  color: #8ee6ff;
   box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.3125rem,
     inset rgba(0, 198, 255, 0.2) 0 0 0.3125rem;
 }

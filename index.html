@@ -14,11 +14,11 @@
     <div id="hero-content">
       <h1 id="title">TRONHACK</h1>
       <p>NZ'S FIRST COLLEGE HACKATHON</p>
-      <p>WAIKATO UNI · AUTUMN 2017</p>
+      <p>WAIKATO UNI · SUMMER 2017</p>
       <p>SIGN UP FOR UPDATES</p>
-      <form action="" id="signup-form">
-        <input type="text" placeholder="EMAIL">
-        <button>SUBMIT</button>
+      <form id="signup-form">
+        <input type="email" id="email" placeholder="EMAIL">
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
 
@@ -42,13 +42,30 @@
 
   <footer>
     <p class="right">
-      Sponsorship inquiries:<br>
-      <a href="#">sponsor@tronhack.nz</a>
+      <a href="mailto:andrew.j.milson@gmail.com">Sponsorship inquiries?<a>
     </p>
     <p class="left">
-      Have any questions?<br>
-      <a href="#">contact@tronhack.nz</a>
+      <a href="mailto:andrew.j.milson@gmail.com">Have any questions?</a>
     </p>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#signup-form').submit(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+          type: 'POST',
+          url: 'http://107.170.242.205:19018/email-signup',
+          data: JSON.stringify({email: $('#email').val()}),
+          contentType: "application/json",
+        });
+
+        $('#email').val('');
+        alert('Thanks for signing up!')
+      });
+    });
+  </script>
 </body>
 </html>
