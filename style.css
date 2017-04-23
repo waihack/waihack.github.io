@@ -285,6 +285,49 @@ hr {
   100% {opacity: 1;}
 }
 
+.container {
+  overflow: hidden;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em 0 1em 0;
+}
+
+.heading span {
+  display: inline-block;
+  padding-left: 0.3em;
+  color: #8ee6ff;
+  letter-spacing: 0.3em;
+  text-align: center;
+  font-weight: normal;
+  text-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;
+  position: relative;
+}
+
+.heading span:after,
+.heading span:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border-bottom: 1px solid #8ee6ff;
+  border-top: 1px solid #8ee6ff;
+  box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;
+  top: 50%;
+  margin-top: -5px;
+  width: 99999px;
+}
+
+.heading span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.heading span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
 /*#mlh-trust-badge {
   pointer: cursor;
   display: block;
@@ -327,7 +370,7 @@ hr {
   left: -50%;
   background-position: center;
   background-repeat: repeat;
-  /*animation: backgroundScroll 1s linear infinite;*/
+  animation: backgroundScroll 12s linear infinite;
   transform: rotateX(13deg);
   font-size: 1em;
 
@@ -340,8 +383,8 @@ hr {
 }
 
 @keyframes backgroundScroll {
-	from {background-position: center 2.8125em;}
-  to {background-position: center 0;}
+	from {background-position: center 100%;}
+  to {background-position: center 2em;}
 }
 
 .right {
@@ -462,10 +505,22 @@ hr {
   }
 }
 
+@media (min-width: 1150px){
+  #gradient-background, #hero {
+    font-size: 14px !important;
+  }
 
-#gradient-background, #hero {
-  font-size: 16px;
+  /*#hero #title {
+    font-size: 14em;
+  }*/
+
+  #hero #hero-content #signup-form input,
+  #hero #hero-content #signup-form button {
+    font-size: 1.8em;
+  }
 }
+
+
 
 #gradient-background, #hero {
   font-size: 12px;
