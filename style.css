@@ -1,36 +1,118 @@
 @font-face {
   font-family: tr2n;
-  src: url('tr2n.ttf');
+  src: url('edunline.ttf');
 }
 
 body, html {
-  font-size: 8px;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  background: #000;
   font-family: Helvetica, Arial;
-  padding: 0;
-  margin: 0;
+}
 
-  background:
-    url('clouds.jpg'),
-    linear-gradient(to right, #1B061C, #0C0C1D);
+#shader {
+  display: block;
+  background: black;
+  position: fixed;
+  top: -100px;
+  bottom: -100px;
+  right: -100px;
+  left: -100px;
+}
 
-  background-size: cover, cover;
-  background-blend-mode: color-dodge;
-  -webkit-animation: gradient 1s linear infinite;
+.container {
+  color: #ccc;
+  position: relative;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  color: #eee;
+  font-weight: 700;
+  line-height: 1.4em;
+  /*font-family: "TR2N";*/
+}
+
+hr {
+  border-color: #ccc;
+  border-width: 2px;
+  opacity: 0.5;
+}
+
+.answer {
+  line-height: 1.7em;
+  font-size: 1.2em;
+}
+
+.heading {
+  margin-top: 10vh;
+  font-size: 3em;
+}
+
+.question {
+  margin-bottom: 5vh;
+}
+
+.container p {
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
+#fade-in-overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1;
 }
 
 #mask-svg {
   position: absolute;
 }
 
-#hero {
-  height: 100%;
+#gradient-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+
+  font-family: Helvetica, Arial;
+  padding: 0;
+  margin: 0;
+
+  /*background:
+    url('clouds.jpg'),
+    linear-gradient(to right, #1B061C, #0C0C1D),
+    linear-gradient(to bottom, transparent, #0C0C1D);*/
+
+  background: url('bg.png');
+
+  background-size: cover, cover;
+  background-blend-mode: color-dodge;
+  -webkit-animation: gradient 1s linear infinite;
+}
+
+#hero {
+  height: 100vh;
+  padding-bottom: 2em;
+  width: 100%;
+
+  position: relative;
+  font-family: Helvetica, Arial;
+  padding: 0;
+  margin: 0;
 }
 
 #hero #hero-content {
-  padding: 2rem;
+  padding: 2em;
   z-index: 2;
   color: #00C6FF;
   position: absolute;
@@ -42,12 +124,17 @@ body, html {
 }
 
 #hero #hero-content p {
-  font-size: 1.5rem;
+  color: #8ee6ff;
+  font-size: 1.5em;
   letter-spacing: 0.3em;
-  text-shadow: rgba(0, 198, 255, 0.8) 0 0 0.5rem,
-    rgba(0, 198, 255, 0.5) 0 0 0.5rem;
+  text-shadow: rgba(0, 198, 255, 0.8) 0 0 0.5em,
+    rgba(0, 198, 255, 0.5) 0 0 0.5em;
 }
 
+
+.hero-break {
+  display: none;
+}
 
 #hero #hero-content #signup-form input,
 #hero #hero-content #signup-form button {
@@ -56,18 +143,18 @@ body, html {
   width: 100%;
   font-family: inherit;
   background: transparent;
-  border: 0.125rem solid rgba(0, 198, 255, 0.8);
+  border: 0.125em solid rgba(0, 198, 255, 1);
   background: rgba(0, 198, 255, 0.2);
-  color: rgba(0, 198, 255, 0.8);
+  color: rgba(0, 198, 255, 1);
   opacity: 1;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   letter-spacing: 0.2em;
   padding: 0.8em 1.5em;
   margin: 0.8em 0.2em 0 0.2em;
   -webkit-transition: border 0.1s linear;
   color: #8ee6ff;
-  box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.3125rem,
-    inset rgba(0, 198, 255, 0.2) 0 0 0.3125rem;
+  box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.3125em,
+    inset rgba(0, 198, 255, 0.2) 0 0 0.3125em;
 }
 
 ::-webkit-input-placeholder {
@@ -76,7 +163,7 @@ body, html {
 }
 
 #hero #hero-content #signup-form {
-  padding-top: 0.5rem;
+  padding-top: 0.5em;
 }
 
 #hero #hero-content #signup-form input {
@@ -90,36 +177,37 @@ body, html {
 #hero #hero-content #signup-form input:focus,
 #hero #hero-content #signup-form button:hover {
   background: rgba(0, 198, 255, 0.3);
-  border: 0.125rem solid rgba(0, 198, 255, 1);
+  border: 0.125em solid rgba(0, 198, 255, 1);
 }
 
 #hero #title {
   color: #8ee6ff;
   max-width: 100%;
   font-family: "TR2N";
-  font-size: 6rem;
+  font-size: 4.3em;
   text-align: center;
   width: 100%;
   padding: 0;
-  margin: 0;
-  animation: fadein 3s linear, flicker 5s 6s infinite linear;
+  margin: 0 0 0.1em 0;
+  /*animation: fadein 3s linear, flicker 5s 6s infinite linear;*/
   height: 1em;
   line-height: 1em;
   position: relative;
   z-index: 2;
   font-weight: normal;
+  letter-spacing: 0.2em;
   opacity: 1;
 
-  text-shadow: 0 0 1.875rem rgba(0, 198, 255, 0.6),
-			0 0 3.75rem rgba(0, 198, 255, 0.4),
-			0 0 6.25rem rgba(0, 198, 255, 0.2),
-			0 0 5.625rem rgba(0, 198, 255, 0.1);
+  /*text-shadow: 0 0 1.875em rgba(0, 198, 255, 0.6),
+			0 0 3.75em rgba(0, 198, 255, 0.4),
+			0 0 6.25em rgba(0, 198, 255, 0.2),
+			0 0 5.625em rgba(0, 198, 255, 0.1);*/
 }
 
 #hero #title:after {
   display: none;
-  content: "TRONHACK";
-  font-size: 0.992em;
+  content: "WAIHACK";
+  font-size: 0.980em;
   opacity: 0.3;
   line-height: inherit;
   position: absolute;
@@ -132,8 +220,8 @@ body, html {
 
 #hero #title:before {
   display: none;
-  content: "TRONHACK";
-  font-size: 0.984em;
+  content: "WAIHACK";
+  font-size: 0.960em;
   opacity: 0.3;
   line-height: inherit;
   position: absolute;
@@ -197,19 +285,31 @@ body, html {
   100% {opacity: 1;}
 }
 
-#hero #floor {
+/*#mlh-trust-badge {
+  pointer: cursor;
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  right: 1rem;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
+}*/
+
+#gradient-background #floor {
 	overflow: hidden;
   position: absolute;
-  height: 40%;
-  bottom: 0;
+  height: 55%;
+  bottom: -7em;
   right: 0;
   left: 0;
 
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #fff);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #fff 70%);
 }
 
-#hero #floor-perspective {
-  perspective: 15vh;
+#gradient-background #floor-perspective {
+  perspective: 20vh;
   perspective-origin: bottom center;
   height: 100%;
   overflow: hidden;
@@ -219,54 +319,29 @@ body, html {
   left: 0;
 }
 
-#hero #floor-perspective #floor-grid {
+#gradient-background #floor-perspective #floor-grid {
   position: absolute;
-  top: -50%;
-  bottom: -1rem;
+  top: -70%;
+  bottom: -2em;
   right: -50%;
   left: -50%;
   background-position: center;
   background-repeat: repeat;
-  animation: backgroundScroll 1s linear infinite;
+  /*animation: backgroundScroll 1s linear infinite;*/
   transform: rotateX(13deg);
-  font-size: 1rem;
+  font-size: 1em;
 
   background-position: center 0;
   background:
-    linear-gradient(to bottom, transparent, rgba(255, 181, 0, 0.4) 0.25em, rgba(251, 227, 0, 1) 0.25em, rgba(251, 227, 0, 1) 0.5em, rgba(255, 181, 0, 0.4) 0.5em, transparent 0.75em),
+    linear-gradient(to bottom, transparent, rgba(255, 181, 0, 0.4) 0.375em, rgba(251, 227, 0, 1) 0.375em, rgba(251, 227, 0, 1) 0.75em, rgba(255, 181, 0, 0.4) 0.75em, transparent 1.125em),
     linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) 0.375em, rgba(251, 227, 0, 1) 0.375em, rgba(251, 227, 0, 1) 0.75em, rgba(255, 181, 0, 0.4) 0.75em, transparent 1.125em);
 
-  background-size: 4.375rem 2.8125rem;
+  background-size: 4.375em 2.8125em;
 }
 
 @keyframes backgroundScroll {
 	from {background-position: center 2.8125em;}
   to {background-position: center 0;}
-}
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: #fff;
-  right: 0;
-  opacity: 0.8;
-}
-
-footer p {
-  padding: 1rem;
-  text-align: center;
-  text-shadow: rgba(255, 255, 255, 0.2) 0 0 0.3125rem;
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-footer a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 0.125rem solid #fff;
-  display: inline-block;
 }
 
 .right {
@@ -279,19 +354,23 @@ footer a {
 
 @media (min-width: 350px) {
   #hero #title {
-    font-size: 7rem;
+    font-size: 4.9em;
   }
 }
 
 @media (min-width: 370px) {
   #hero #title {
-    font-size: 7.5rem;
+    font-size: 5em;
   }
 }
 
 @media (min-width: 400px) {
   #hero #title {
-    font-size: 8rem;
+    font-size: 5.5em;
+  }
+
+  #gradient-background #floor-perspective {
+    font-size: 0.6em;
   }
 }
 
@@ -302,11 +381,11 @@ footer a {
 
   footer p {
     font-size: 1.5rem;
-  }
+  }*/
 
   #hero #title {
-    font-size: 8rem;
-  }*/
+    font-size: 5.6rem;
+  }
 
   #hero #hero-content #signup-form input,
   #hero #hero-content #signup-form button {
@@ -316,17 +395,26 @@ footer a {
   }
 }
 
-@media (min-width: 38.75rem) {
-  html, body {
-    font-size: 10px;
-  }
 
-  footer p {
-    font-size: 1.5rem;
-  }
+/*html, body {
+  font-size: 10px;
+}
+      _   -
+   /
+  |
+ |
+\/
+*/
+
+@media (min-width: 500px) {
+
+
+  /*#gradient-background, #hero {
+    font-size: 10px;
+  }*/
 
   #hero #title {
-    font-size: 10rem;
+    font-size: 6.5em;
   }
 
   #hero #title:after,
@@ -342,32 +430,64 @@ footer a {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 617px){
   #hero #hero-content #signup-form input,
   #hero #hero-content #signup-form button {
     display: inline-block;
     width: auto;
     margin: 0.2em 0.2em;
-    font-size: 1.3rem;
-  }
-
-  #hero #hero-content #signup-form input {
-    width: 25em;
+    font-size: 1.7em;
   }
 }
 
-html, body {
-  font-size: 1.3vw;
+@media (min-width: 700px){
+  #hero #title {
+    font-size: 9em;
+  }
+
+  #hero #hero-content #signup-form input,
+  #hero #hero-content #signup-form button {
+    font-size: 1.8em;
+  }
 }
 
-@media (orientation: portrait) {
-  html, body {
-    font-size: 1.15vh;
+@media (min-width: 900px){
+  #hero #title {
+    font-size: 12em;
   }
 
-
-  #hero #floor-perspective #floor-grid {
-    font-size: 2rem;
-    background-size: 8.75rem 5.625rem;
+  #hero #hero-content #signup-form input,
+  #hero #hero-content #signup-form button {
+    font-size: 1.8em;
   }
+}
+
+
+#gradient-background, #hero {
+  font-size: 16px;
+}
+
+#gradient-background, #hero {
+  font-size: 12px;
+}
+
+
+#gradient-background #floor-perspective #floor-grid {
+  font-size: 1em;
+  background-size: 8.75em 5.625em;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
