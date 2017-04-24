@@ -7,6 +7,7 @@ body, html {
   min-height: 100%;
   background: #000;
   font-family: Helvetica, Arial;
+  overflow-x: hidden;
 }
 
 #shader {
@@ -44,7 +45,7 @@ hr {
 
 .answer {
   line-height: 1.7em;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .heading {
@@ -56,8 +57,8 @@ hr {
   margin-bottom: 5vh;
 }
 
-.container p {
-  font-size: 1.2em;
+.container p, .container li {
+  font-size: 1.3em;
   line-height: 1.7em;
 }
 
@@ -129,6 +130,15 @@ hr {
   letter-spacing: 0.3em;
   text-shadow: rgba(0, 198, 255, 0.8) 0 0 0.5em,
     rgba(0, 198, 255, 0.5) 0 0 0.5em;
+}
+
+a {
+  color: rgb(0, 198, 255) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  border-bottom: 2px solid rgb(0, 198, 255);
 }
 
 
@@ -285,9 +295,6 @@ hr {
   100% {opacity: 1;}
 }
 
-.container {
-  overflow: hidden;
-}
 
 .heading {
   text-align: center;
@@ -298,6 +305,7 @@ hr {
 .heading span {
   display: inline-block;
   padding-left: 0.3em;
+  font-weight: 800 !important;
   color: #8ee6ff;
   letter-spacing: 0.3em;
   text-align: center;
@@ -310,22 +318,51 @@ hr {
 .heading span:before {
   content: "";
   position: absolute;
-  height: 10px;
-  border-bottom: 1px solid #8ee6ff;
-  border-top: 1px solid #8ee6ff;
+  height: 8px;
+  /*border-bottom: 1px solid #8ee6ff;*/
+  /*border-top: 1px solid #8ee6ff;*/
+  background: #8ee6ff;
   box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;
   top: 50%;
-  margin-top: -5px;
+  margin-top: -4px;
   width: 99999px;
 }
 
 .heading span:before {
+  border-radius: 0 10px 10px 0;
   right: 100%;
   margin-right: 15px;
 }
 .heading span:after {
+  border-radius: 10px 0 0 10px;
   left: 100%;
   margin-left: 15px;
+}
+
+table {
+  font-size: 1.4em !important;
+  text-align: center;
+  color: #fff;
+}
+
+table th {
+  text-align: center;
+}
+
+table .time {
+  width: 20%;
+}
+
+table .event {
+  width: 40%;
+}
+
+table .location {
+  width: 40%;
+}
+
+table td {
+  vertical-align: middle !important;
 }
 
 /*#mlh-trust-badge {
@@ -370,7 +407,7 @@ hr {
   left: -50%;
   background-position: center;
   background-repeat: repeat;
-  animation: backgroundScroll 12s linear infinite;
+  animation: backgroundScroll 120s linear infinite;
   transform: rotateX(13deg);
   font-size: 1em;
 
@@ -383,8 +420,8 @@ hr {
 }
 
 @keyframes backgroundScroll {
-	from {background-position: center 100%;}
-  to {background-position: center 2em;}
+	from {background-position: center 500%;}
+  to {background-position: center 0;}
 }
 
 .right {
@@ -459,6 +496,11 @@ hr {
   #hero #title {
     font-size: 6.5em;
   }
+
+  .heading {
+    font-size: 3em;
+  }
+
 
   #hero #title:after,
   #hero #title:before {
