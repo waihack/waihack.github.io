@@ -393,6 +393,11 @@ table td {
 
 
 @media(max-width:991px) {
+  table td {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .schedule-date {
     text-align: center;
     padding: 1em 0 0.5em 0;
@@ -402,6 +407,7 @@ table td {
     text-align: center;
     display: inline;
     font-size: 2em !important;
+    letter-spacing: normal !important;
 
     color: white;
     text-shadow: none;
