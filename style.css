@@ -97,6 +97,7 @@ hr {
   background: url('bg.png');
 
   background-size: cover, cover;
+  background-position: center;
   background-blend-mode: color-dodge;
   -webkit-animation: gradient 1s linear infinite;
 }
@@ -147,7 +148,7 @@ a:hover {
 }
 
 #hero #hero-content #signup-form input,
-#hero #hero-content #signup-form button {
+#hero #hero-content #signup-form a {
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -180,12 +181,12 @@ a:hover {
   text-transform: uppercase;
 }
 
-#hero #hero-content #signup-form button {
+#hero #hero-content #signup-form a {
   cursor: pointer;
 }
 
 #hero #hero-content #signup-form input:focus,
-#hero #hero-content #signup-form button:hover {
+#hero #hero-content #signup-form a:hover {
   background: rgba(0, 198, 255, 0.3);
   border: 0.125em solid rgba(0, 198, 255, 1);
 }
@@ -199,7 +200,7 @@ a:hover {
   width: 100%;
   padding: 0;
   margin: 0 0 0.1em 0;
-  /*animation: fadein 3s linear, flicker 5s 6s infinite linear;*/
+  animation: fadein 3s linear, flicker 5s 6s infinite linear;
   height: 1em;
   line-height: 1em;
   position: relative;
@@ -208,8 +209,8 @@ a:hover {
   letter-spacing: 0.2em;
   opacity: 1;
 
-  /*text-shadow: 0 0 1.875em rgba(0, 198, 255, 0.6),
-			0 0 3.75em rgba(0, 198, 255, 0.4),
+  text-shadow: 0 0 200px rgba(0, 198, 255, 1);
+			/*1.875em 0 0 3.75em rgba(0, 198, 255, 0.4),
 			0 0 6.25em rgba(0, 198, 255, 0.2),
 			0 0 5.625em rgba(0, 198, 255, 0.1);*/
 }
@@ -217,28 +218,31 @@ a:hover {
 #hero #title:after {
   display: none;
   content: "WAIHACK";
-  font-size: 0.980em;
+  font-size: 0.988em;
   opacity: 0.3;
   line-height: inherit;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   color: inherit;
 }
 
 #hero #title:before {
   display: none;
   content: "WAIHACK";
-  font-size: 0.960em;
+  font-size: 0.970em;
   opacity: 0.3;
   line-height: inherit;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
-  left: 0;
+  /*right: 0;*/
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   color: inherit;
 }
 
@@ -299,43 +303,51 @@ a:hover {
 .heading {
   text-align: center;
   font-size: 2em;
-  padding: 0.5em 0 1em 0;
+  padding: 1.5em 0 1em 0;
 }
 
 .heading span {
   display: inline-block;
   padding-left: 0.3em;
+  font-size: 1.3em;
   font-weight: 800 !important;
   color: #8ee6ff;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   text-align: center;
   font-weight: normal;
-  text-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;
+  /*text-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;*/
   position: relative;
 }
 
 .heading span:after,
 .heading span:before {
   content: "";
+  /*opacity: 0.2;*/
   position: absolute;
-  height: 8px;
+  height: 0px;
   /*border-bottom: 1px solid #8ee6ff;*/
   /*border-top: 1px solid #8ee6ff;*/
-  background: #8ee6ff;
-  box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;
+  /*background: www.cybersecuritychallenge.org.nz;*/
+  /*box-shadow: rgba(0, 198, 255, 0.5) 0 0 0.5em, rgba(0, 198, 255, 0.3) 0 0 0.5em;*/
   top: 50%;
-  margin-top: -4px;
+  margin-top: -6px;
   width: 99999px;
 }
 
 .heading span:before {
-  border-radius: 0 10px 10px 0;
+  /*border-radius: 0 10px 10px 0;*/
+  border-top: 12px solid #8ee6ff;
+  background: transparent;
+  border-right: 10px solid transparent;
   right: 100%;
   margin-right: 15px;
 }
 .heading span:after {
-  border-radius: 10px 0 0 10px;
+  /*border-radius: 10px 0 0 10px;*/
   left: 100%;
+  border-bottom: 12px solid #8ee6ff;
+  background: transparent;
+  border-left: 10px solid transparent;
   margin-left: 15px;
 }
 
@@ -483,8 +495,8 @@ table td {
 
   background-position: center 0;
   background:
-    linear-gradient(to bottom, transparent, rgba(255, 181, 0, 0.4) 0.375em, rgba(251, 227, 0, 1) 0.375em, rgba(251, 227, 0, 1) 0.75em, rgba(255, 181, 0, 0.4) 0.75em, transparent 1.125em),
-    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) 0.375em, rgba(251, 227, 0, 1) 0.375em, rgba(251, 227, 0, 1) 0.75em, rgba(255, 181, 0, 0.4) 0.75em, transparent 1.125em);
+    linear-gradient(to bottom, transparent, rgba(255, 181, 0, 0.4) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.75em * 1.8), rgba(255, 181, 0, 0.4) calc(0.75em * 1.8), transparent calc(1.125em * 1.8)),
+    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.75em * 1.8), rgba(255, 181, 0, 0.4) calc(0.75em * 1.8), transparent calc(1.125em * 1.8));
 
   background-size: 4.375em 2.8125em;
 }
@@ -538,7 +550,7 @@ table td {
   }
 
   #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form button {
+  #hero #hero-content #signup-form a {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -578,7 +590,7 @@ table td {
   }
 
   #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form button {
+  #hero #hero-content #signup-form a {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -587,7 +599,7 @@ table td {
 
 @media (min-width: 617px){
   #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form button {
+  #hero #hero-content #signup-form a {
     display: inline-block;
     width: auto;
     margin: 0.2em 0.2em;
@@ -601,7 +613,7 @@ table td {
   }
 
   #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form button {
+  #hero #hero-content #signup-form a {
     font-size: 1.8em;
   }
 }
@@ -616,7 +628,7 @@ table td {
   }
 
   #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form button {
+  #hero #hero-content #signup-form a {
     font-size: 1.8em;
   }
 }
@@ -631,7 +643,7 @@ table td {
   }*/
 
   #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form button {
+  #hero #hero-content #signup-form a {
     font-size: 1.8em;
   }
 }
