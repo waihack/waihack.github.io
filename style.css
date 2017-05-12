@@ -200,7 +200,7 @@ a:hover {
   width: 100%;
   padding: 0;
   margin: 0 0 0.1em 0;
-  animation: fadein 3s linear, flicker 5s 6s infinite linear;
+  /*animation: fadein 3s linear, flicker 5s 6s infinite linear;*/
   height: 1em;
   line-height: 1em;
   position: relative;
@@ -489,20 +489,20 @@ table td {
   left: -50%;
   background-position: center;
   background-repeat: repeat;
-  animation: backgroundScroll 120s linear infinite;
+  /*animation: backgroundScroll 2s linear infinite;*/
   transform: rotateX(13deg);
   font-size: 1em;
 
   background-position: center 0;
   background:
-    linear-gradient(to bottom, transparent, rgba(255, 181, 0, 0.4) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.75em * 1.8), rgba(255, 181, 0, 0.4) calc(0.75em * 1.8), transparent calc(1.125em * 1.8)),
-    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.375em * 1.8), rgba(251, 227, 0, 1) calc(0.75em * 1.8), rgba(255, 181, 0, 0.4) calc(0.75em * 1.8), transparent calc(1.125em * 1.8));
+    linear-gradient(to bottom, transparent, rgba(255, 181, 0, 0.4) calc(0.375em * 1), rgba(251, 227, 0, 1) calc(0.375em * 1), rgba(251, 227, 0, 1) calc(0.75em * 1), rgba(255, 181, 0, 0.4) calc(0.75em * 1), transparent calc(1.125em * 1)),
+    linear-gradient(to right, transparent, rgba(255, 181, 0, 0.4) calc(0.375em * 1), rgba(251, 227, 0, 1) calc(0.375em * 1), rgba(251, 227, 0, 1) calc(0.75em * 1), rgba(255, 181, 0, 0.4) calc(0.75em * 1), transparent calc(1.125em * 1));
 
   background-size: 4.375em 2.8125em;
 }
 
 @keyframes backgroundScroll {
-	from {background-position: center 500%;}
+	from {background-position: center calc(2 * 2.8125em);}
   to {background-position: center 0;}
 }
 
@@ -618,9 +618,104 @@ table td {
   }
 }
 
-@media (min-width: 900px){
+@media (min-width: 1100px){
+  #hero {
+    position: fixed;
+    /*width: 50%;*/
+    /*left: 0;*/
+    /*transform: scale(1);*/
+    /*transition: transform 0.1s linear, left 0.1s linear;*/
+  }
+
+
+  .moreinformation #hero {
+    /*transform: scale(0.6);*/
+    left: -25%;
+  }
+
+
+  .moreinformation #shader {
+    left: 50%;
+    opacity: 0.8 !important;
+  }
+
+  #hero  #hero-content #signup-form a {
+    display: none;
+  }
+
+  #hero  #hero-content #signup-form a#moreinformation-btn {
+   display: inline-block;
+  }
+
+  .moreinformation #hero  #hero-content #signup-form a {
+    display: inline-block;
+  }
+
+  .moreinformation #gradient-background #floor-perspective {
+    left: -50%;
+  }
+
+  .moreinformation #gradient-background #floor-perspective #floor-grid {
+    right: -100%;
+    left: 0;
+  }
+
+  .moreinformation #gradient-background #floor-perspective #floor-grid {
+    /*animation: backgroundScroll 1s ease 2;*/
+  }
+
+  .moreinformation #hero  #hero-content #signup-form a#moreinformation-btn {
+    display: none;
+  }
+
+  .container {
+    left: 100%;
+    display: none;
+    padding: 3em;
+    margin: 0;
+    width: 50%;
+  }
+
+  .moreinformation .container {
+    /*position: fixed;*/
+    top: 0;
+    bottom: 0;
+    display: block;
+    left: 50%;
+    right: 0;
+  }
+
+  .container .heading span:after, .container .heading span:before {
+    display: none;
+  }
+
+  .container .heading span {
+    letter-spacing: normal;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container .heading {
+    padding: 1em 0;
+    /*background: rgba(0, 0, 0, 0.2);*/
+    margin: 0;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  .container > br {
+    display: none;
+  }
+
   #hero #title {
     font-size: 12em;
+    /*padding-left: 1em;*/
+    left: 0.1em;
+  }
+
+  .moreinformation #hero #title {
+    font-size: 7.5em;
   }
 
   table {
@@ -633,20 +728,6 @@ table td {
   }
 }
 
-@media (min-width: 1150px){
-  #gradient-background, #hero {
-    font-size: 14px !important;
-  }
-
-  /*#hero #title {
-    font-size: 14em;
-  }*/
-
-  #hero #hero-content #signup-form input,
-  #hero #hero-content #signup-form a {
-    font-size: 1.8em;
-  }
-}
 
 
 
