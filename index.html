@@ -19,7 +19,8 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900" rel="stylesheet">
+
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,7 +33,7 @@
 
 	</script>
 </head>
-<body class="moreinformation">
+<body>
 	<div id="gradient-background">
 		<div id="floor" style="mask: url(#mask-1);">
 			<svg width="100%" height="100%" id="mask-svg">
@@ -69,7 +70,7 @@
 			<form id="signup-form">
 				<a href="https://my.waihack.org">APPLY</a>
 				<a href="#sponsor">SPONSOR</a>
-        <a id="moreinformation-btn" onclick="moreInformation()">MORE INFORMATION</a>
+          <a id="moreinformation-btn" onclick="moreInformation()">MORE INFORMATION</a>
 			</form>
 		</div>
 	</div>
@@ -119,11 +120,114 @@
         <a href="#3" data-toggle="tab"><i class="fa fa-question"></i> Other</a>
       </li>
       <li>
-        <a href="#4"><i class="fa fa-file-text-o"></i> Application</a>
+        <a href="#4" data-toggle="tab"><i class="fa fa-file-text-o"></i> Application</a>
       </li>
     </ul>
 
-		<h2 class="title"><i class="fa fa-plane" aria-hidden="true"></i> Travel</h2>
+    <div class="tab-content ">
+      <div class="tab-pane active" id="1">
+      	<div class="question">
+      		<h4>How much does it cost?</h4>
+      		<div class="answer">Nada. Zip. Zero. Zilch. We'll provide you with a weekend's worth of swag, meals, drinks, and snacks and a place to crash when you need a break from coding. In fact, we'll even reimburse your travel. You will be able to indicate travel reumbersment in your application's confirmation form.</div>
+      	</div>
+      	<div class="question">
+      		<h4>How do reimbursements work?</h4>
+      		<div class="answer">
+      			When you're accepted, we'll have a page where you can submit your required travel reimbursement forms and receipts. For each location hackers will be coming from, we determine the cheapest reasonable option and set a reimbursement cap at a bit more than
+      			the cost of that option. We will reimburse all travel costs up to this cap—if you go over, we'll still reimburse the amount of the cap, but no more.
+      		</div>
+      	</div>
+      	<div class="question">
+      		<h4>Will there be transportation to Waikato Uni?</h4>
+      		<div class="answer">Not at this stage. Busses may be arranged from key universities in the North Island to Waikato Uni. Information about this will be released closer to the event. For the time being attendees are expected to find their own transportation to the event. For North Island attendees we advise using one of the bus services to hamilton transport service. We will be running vans between Hamilton transport center and Waikato University
+      			on the day of the event. Information about these vans will be released closer to the time of the event. If you indicate in your confirmation form, we can find a Waikato Student to give you a ride between Hamilton Transport Center and the University</div>
+      	</div>
+      	<div class="question">
+      		<h4>Once I am accepted, what do I need to bring?</h4>
+      		<div class="answer">
+      			<strong>Need:</strong> Laptop and charger, cellphone and charger, sleeping bag, pillow, toiletries, a couple changes of clothes (nerdy shirts and onesies are particularly appreciated).
+      			<br><strong>Don't need:</strong> a pre-determined team, an idea for an app, food or drink.
+      			<br><strong>Please don't bring:</strong> Firearms or other weapons, alcohol, illegal drugs, animals (no matter how adorable).
+      		</div>
+      	</div>
+      </div>
+      <div class="tab-pane" id="2">
+			<div class="question">
+				<h4>When/Where can I hack?</h4>
+				<div class="answer">WaiHack will start in the evening of Friday, July 7th with the opening ceremony. A detailed schedule of events and locations will be posted later. All work eligible for
+					prizes must be completed between Friday night after the opening ceremony and Sunday morning at the <a target="_blank" href="http://www.waikato.ac.nz/academy/location">Ghallagher Academy of Performing Arts</a><br>.</div>
+			</div>
+			<div class="question">
+				<h4>What can I win?</h4>
+				<div class="answer">
+					It's not about winning—it's about learning and making friends that last for a lifetime (so everyone's a winner!). If you're thinking, "that's adorable...but really," then we've got you covered too. A panel of professional judges will select the best three
+					hacks based on the following criteria: creativity, technical difficulty, polish, and usefulness. Top prizes are TBA, but usually involve tech and insane perks from company sponsors. Most sponsors offer their own prizes too for specific categories,
+					which they judge and fund themselves.
+				</div>
+			</div>
+      </div>
+      <div class="tab-pane" id="3">
+  				<div class="question">
+  					<h4>I'm not a student, so how can I get involved?</h4>
+              <div class="answer">We will be allowing recent graduates or persons under the age of 25 to participate in the event. If you're looking to mentor (i.e. someone with technical skills who'd be willing to help out participants during the weekend), you should reach out to us.
+  						Otherwise, you can see the finished products at the demos on Sunday.</div>
+  				</div>
+          <div class="question">
+  					<h4>How is WaiHack run?</h4>
+  					<div class="answer">
+  						WaiHack is planned almost entirely by University of Waikato students. One hundred percent of the funding for WaiHack comes from corporate sponsor donations. You can find more information about sponsoring at our sponsor section.
+  					</div>
+  				</div>
+  				<div class="question">
+  					<h4>What if this FAQ didn’t answer my questions?</h4>
+  					<div class="answer">
+  						Please email us at team@waihack.org if you’re in any way confused or concerned! We’d love to help you out :)
+  					</div>
+  				</div>
+  				<div class="question">
+  					<h4>What should I do if I have additional questions?</h4>
+  					<div class="answer">
+  						If you have questions about anything, shoot us an email at team@waihack.org.
+  					</div>
+  				</div>
+  				<div class="question">
+  					<h4>Where will I sleep?</h4>
+  					<div class="answer">
+  						Hacking all night is fun, but you can also get some rest when you need it! If you indicate in your confirmation form, we can match you with a Waikato University student who will provide places to sleep and shower.
+  					</div>
+  				</div>
+          <div class="question">
+            <h4>Will accomodation be provided?</h4>
+            <div class="answer">For attendees, if you indicate in your confirmation form, we can match you with a Waikato University student who will provide places to sleep and shower. For sponsors, we recommend looking up accommodation in Hamilton.</div>
+          </div>
+      </div>
+      <div class="tab-pane" id="4">
+			<div class="question">
+				<h4>What's the application process like?</h4>
+				<div class="answer">We're looking for creative and innovative people with a set of skills that can contribute to a project - mobile, web, hardware, design, or anything else really cool. We generally prefer people that have proven their abilities in previous projects, evident through links, project descriptions, Github profiles, video demos or awards.</div>
+			</div>
+			<div class="question">
+				<h4>When will applications close?</h4>
+				<div class="answer">
+					The application will close June 16th at 11:59pm.
+				</div>
+			</div>
+			<div class="question">
+				<h4>Who can apply?</h4>
+				<div class="answer">
+					Any tech, university, recent grad, or high school student 15 years old or older on July 7th, 2017 is eligible to apply.
+				</div>
+			</div>
+			<div class="question">
+				<h4>Should Waikato students fill out the application too?</h4>
+				<div class="answer">
+					Yes! Every Waikato student who wants to participate is free to, If you apply by June 16th and confirm by June 23rd, you will be guaranteed a spot at WaiHack automatically. Otherwise, you can try for walk-in admission the day of the event.
+				</div>
+			</div>
+      </div>
+    </div>
+
+		<!-- <h2 class="title"><i class="fa fa-plane" aria-hidden="true"></i> Travel</h2>
 		<div class="row" id="faq-questions">
 			<div class="col-md-4">
 				<div class="question">
@@ -158,9 +262,9 @@
 		</div>
 
 		<br>
-		<br>
+		<br> -->
 
-		<h2 class="title"><i class="fa fa-terminal"></i> Hacking</h2>
+		<!-- <h2 class="title"><i class="fa fa-terminal"></i> Hacking</h2>
 		<br>
 		<div class="row" id="faq-questions">
 			<div class="col-md-6">
@@ -183,9 +287,9 @@
 		</div>
 
 		<br>
-		<br>
+		<br> -->
 
-		<h2 class="title"><i class="fa fa-question"></i> Other</h2>
+		<!-- <h2 class="title"><i class="fa fa-question"></i> Other</h2>
 		<br>
 		<div class="row" id="faq-questions">
 			<div class="col-md-4">
@@ -231,9 +335,9 @@
 
 		<br>
 		<br>
-		<br>
+		<br> -->
 
-		<h2 class="title"><i class="fa fa-file-text-o"></i> Application</h2>
+		<!-- <h2 class="title"><i class="fa fa-file-text-o"></i> Application</h2>
 		<br>
 		<div class="row" id="faq-questions">
 			<div class="col-md-4">
@@ -264,9 +368,21 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<h1 class="heading"><span>SCHEDULE</span></h1>
+		<!-- <h1 class="heading"><span>SCHEDULE</span></h1>
+
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#1b" data-toggle="tab"><i class="fa fa-plane" aria-hidden="true"></i> Friday 7th July</a>
+      </li>
+      <li>
+        <a href="#2b" data-toggle="tab"><i class="fa fa-terminal"></i> Saturday 8th July</a>
+      </li>
+      <li>
+        <a href="#3b" data-toggle="tab"><i class="fa fa-question"></i> Sunday 9th July</a>
+      </li>
+    </ul>
 
     <p class="text-center">
       Locations are in relation to the <a target="_blank" href="http://www.waikato.ac.nz/academy/location">Ghallagher Academy of Performing Arts</a>.<br> This schedule is not final, updates will be sent out closer to the event.
@@ -492,20 +608,15 @@
   				</tbody>
   			</table>
       </div>
-    </div>
+    </div> -->
 
 		<h1 class="heading" id="sponsor"><span>SPONSORS</span></h1>
-    <br>
-		<h2 class="text-center" style="opacity: 0.5">To be announced!</h2>
-    <br>
-    <br>
-    <br>
     <p>
     If you're interested in sponsoring WaiHack, then get in touch with us through <a href="mailto:team@waihack.org">team@waihack.org</a>. We will get back in touch with more informaiton about sponsorship.
       </p>
 	</div>
 
-	<!-- <div id="hero">
+	<div id="hero" class="second-hero">
 		<div id="texture"></div>
 
 		<div id="hero-content">
@@ -524,9 +635,10 @@
 				<a href="#sponsor">SPONSOR</a>
 			</form>
 		</div>
-	</div> -->
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			var $shader = $("#shader");
