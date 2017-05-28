@@ -753,6 +753,14 @@ body #hero #hero-content form #moreinformation-btn {
   #hero #hero-content #signup-form a {
     font-size: 1.8em;
   }
+
+  .moreinformation .descrip-break {
+    display: block !important;
+  }
+
+  .moreinformation .descrip-dot {
+    display: none !important;
+  }
 }
 
 
