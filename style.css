@@ -3,6 +3,18 @@
   src: url('edunline.ttf');
 }
 
+.concepts-container {
+  display: inline-block;
+  width: 230px;
+  overflow: hidden;
+}
+
+.concepts-container img {
+  position: relative;
+  left: -1365px;
+  height: 200px;
+}
+
 body, html {
   min-height: 100%;
   background: #000;
