@@ -170,7 +170,7 @@ a:hover {
   background: rgba(0, 198, 255, 0.2);
   color: rgba(0, 198, 255, 1);
   opacity: 1;
-  font-size: 1.5em;
+  font-size: 1em;
   letter-spacing: 0.2em;
   padding: 0.8em 1.5em;
   margin: 0.8em 0.2em 0 0.2em;
@@ -187,10 +187,6 @@ a:hover {
 
 #hero #hero-content #signup-form {
   padding-top: 0.5em;
-}
-
-#hero #hero-content #signup-form input {
-  text-transform: uppercase;
 }
 
 #hero #hero-content #signup-form a {
