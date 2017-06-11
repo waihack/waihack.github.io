@@ -139,7 +139,7 @@ hr {
 
 #hero #hero-content p {
   color: #8ee6ff;
-  font-size: 1.5em;
+  font-size: 1.8em;
   letter-spacing: 0.3em;
   text-shadow: rgba(0, 198, 255, 0.8) 0 0 0.5em,
     rgba(0, 198, 255, 0.5) 0 0 0.5em;
@@ -167,10 +167,10 @@ a:hover {
   font-family: inherit;
   background: transparent;
   border: 0.125em solid rgba(0, 198, 255, 1);
-  background: rgba(0, 198, 255, 0.2);
+  background: rgba(0, 198, 255, 0.5);
   color: rgba(0, 198, 255, 1);
   opacity: 1;
-  font-size: 1em;
+  font-size: 1.5em;
   letter-spacing: 0.2em;
   padding: 0.8em 1.5em;
   margin: 0.8em 0.2em 0 0.2em;
